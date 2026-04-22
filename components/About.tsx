@@ -17,10 +17,10 @@ export default function About() {
           {/* LEFT TEXT */}
           <div className="col-span-3">
             <h2 className="text-2xl md:text-3xl leading-tight text-gray-900 mr-10">
-              Welcome to En ergyc Consultant, a leading provider with expertise
-              in electrical, control, automation, aviation, runway lighting
-              systems, airport technologies, digital, and IoT supplies for
-              various industries.
+              Welcome to En ergyc Consultant, delivering scalable electrical,
+              automation, and electrification solutions across industries—from
+              EV fleet infrastructure and smart energy systems to aviation and
+              IoT technologies.
             </h2>
 
             <button className="mt-8 bg-stone-800 text-white px-6 py-3 rounded-md text-sm hover:scale-105 transition flex items-center gap-2">

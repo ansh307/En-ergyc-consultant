@@ -16,7 +16,7 @@ export default function WhyUs() {
           {/* HEADING */}
           <div className="max-w-lg mb-12 text-balance mx-auto">
             <h2 className="text-3xl md:text-5xl font-medium text-gray-900 leading-tight">
-              Powering Progress Across Industries
+              Powering the Future of Industry
             </h2>
 
             <p className="mt-4 text-gray-600 text-sm md:text-base">
