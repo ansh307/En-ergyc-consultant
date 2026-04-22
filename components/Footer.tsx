@@ -80,7 +80,7 @@ export default function Footer() {
         {/* BOTTOM */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-6 text-sm text-white/50 gap-4">
           <p>© 2026 En-ergyc-consultant. All rights reserved.</p>
-          <p>Powered by En-ergyc-consultant</p>
+          <p>Made by AIMP</p>
         </div>
       </div>
     </footer>
