@@ -17,13 +17,13 @@ export default function About() {
           {/* LEFT TEXT */}
           <div className="col-span-3">
             <h2 className="text-2xl md:text-3xl leading-tight text-gray-900 mr-10">
-              Welcome to Evostel, a leading provider with expertise in
-              electrical, control, automation, aviation, runway lighting
+              Welcome to En ergyc Consultant, a leading provider with expertise
+              in electrical, control, automation, aviation, runway lighting
               systems, airport technologies, digital, and IoT supplies for
               various industries.
             </h2>
 
-            <button className="mt-8 bg-[#6b5b95] text-white px-6 py-3 rounded-md text-sm hover:scale-105 transition flex items-center gap-2">
+            <button className="mt-8 bg-stone-800 text-white px-6 py-3 rounded-md text-sm hover:scale-105 transition flex items-center gap-2">
               About us →
             </button>
           </div>
@@ -32,7 +32,7 @@ export default function About() {
           <div className="relative w-full h-[260px] md:h-[320px] rounded-xl overflow-hidden col-span-2">
             <Image
               src="/about.png" // 👈 replace with your image
-              alt="About Evostel"
+              alt="About En ergyc Consultant"
               fill
               className="object-cover"
             />

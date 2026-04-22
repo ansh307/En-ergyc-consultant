@@ -18,7 +18,8 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/50" />
 
       {/* Content */}
-      <div className="relative z-10 flex h-full pb-20 px-6 md:px-32">
+
+      <div className="relative z-10 flex w-full h-full pb-20 px-6 md:px-32">
         <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-end">
           {/* LEFT TEXT */}
           <div className="max-w-xl">

@@ -16,11 +16,9 @@ export default function CTASection() {
 
       {/* CONTENT */}
       <div className="relative z-10 max-w-2xl text-white">
-        <div className="w-12 h-[3px] bg-orange-500 mx-auto mb-6" />
-
         <h2 className="text-3xl md:text-5xl font-medium leading-tight">
-          Get Your Free{" "}
-          <span className="bg-orange-500 text-black px-2">Consultation</span>
+          Get Your Free Consultation
+          {/* <span className="bg-stone-200 text-black px-2">Consultation</span> */}
         </h2>
 
         <p className="mt-4 text-sm md:text-base text-white/80">
@@ -28,7 +26,7 @@ export default function CTASection() {
           electrify your vision and bring it to life.
         </p>
 
-        <button className="mt-8 bg-orange-500 text-white px-6 py-3 rounded-md text-sm font-medium hover:scale-105 transition">
+        <button className="mt-8 bg-stone-100 text-black px-6 py-3 rounded-md text-sm font-medium hover:scale-105 transition">
           Book An Appointment →
         </button>
       </div>
