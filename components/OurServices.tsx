@@ -1,33 +1,54 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function OurServices() {
   const sliderRef = useRef<HTMLDivElement>(null);
+  const [progress, setProgress] = useState(0);
 
+  // ✅ FIXED SCROLL (responsive)
   const scroll = (dir: "left" | "right") => {
     if (!sliderRef.current) return;
 
-    const scrollAmount = 400;
+    const container = sliderRef.current;
+    const scrollAmount = container.clientWidth * 0.8;
 
-    sliderRef.current.scrollBy({
+    container.scrollBy({
       left: dir === "left" ? -scrollAmount : scrollAmount,
       behavior: "smooth",
     });
   };
 
+  // ✅ REAL PROGRESS BAR
+  useEffect(() => {
+    const container = sliderRef.current;
+    if (!container) return;
+
+    const updateProgress = () => {
+      const maxScroll = container.scrollWidth - container.clientWidth;
+      const current = container.scrollLeft;
+
+      const percent = (current / maxScroll) * 100;
+      setProgress(percent || 0);
+    };
+
+    container.addEventListener("scroll", updateProgress);
+
+    return () => container.removeEventListener("scroll", updateProgress);
+  }, []);
+
   return (
     <section className="w-full bg-[#f5f5f5] py-20 md:py-28 px-6 md:px-32">
       <div className="max-w-7xl mx-auto">
+        {/* HEADER */}
         <div className="grid md:grid-cols-3 gap-4 items-start">
           <p className="text-sm text-gray-500 mb-20 flex items-center gap-2">
             <span className="w-2 h-2 bg-gray-400 rounded-full" />
             Our Services
           </p>
 
-          {/* HEADING */}
           <div className="max-w-lg mb-32 text-balance mx-auto">
             <h2 className="text-3xl md:text-5xl font-medium text-gray-900 leading-tight">
               Our Services
@@ -46,75 +67,41 @@ export default function OurServices() {
             ref={sliderRef}
             className="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar"
           >
-            {/* CARD 1 */}
             <ServiceCard
-              variant="text"
               title="Electric Supplies"
-              description="At Evostel, we provide a comprehensive range of high-quality electric supplies designed to meet the demanding needs of industrial, commercial, and infrastructure projects."
+              description="High-quality electric supplies for industrial and infrastructure projects."
               color="bg-teal-500 text-white"
             />
 
-            {/* CARD 2 IMAGE */}
-            <div className="min-w-[800px] h-[500px] relative rounded-xl overflow-hidden">
-              <Image
-                src="/about.png"
-                alt="Service"
-                fill
-                className="object-cover"
-              />
-            </div>
+            <ImageCard />
 
-            {/* CARD 3 */}
             <ServiceCard
-              variant="text"
-              title="Control & Automation Supplies"
-              description="Evostel empowers industries to achieve smarter operations through a full suite of control and automation products."
+              title="Control & Automation"
+              description="Smart automation systems to optimize operations."
               color="bg-purple-200 text-black"
               buttonStyle="dark"
             />
-            {/* CARD 4 IMAGE */}
-            <div className="min-w-[800px] h-[500px] relative rounded-xl overflow-hidden">
-              <Image
-                src="/about.png"
-                alt="Service"
-                fill
-                className="object-cover"
-              />
-            </div>
 
-            {/* CARD 5 */}
+            <ImageCard />
+
             <ServiceCard
-              variant="text"
-              title="Control & Automation Supplies"
-              description="Evostel empowers industries to achieve smarter operations through a full suite of control and automation products."
+              title="Advanced Systems"
+              description="Cutting-edge industrial solutions."
               color="bg-purple-200 text-black"
               buttonStyle="dark"
             />
-            {/* CARD 6 IMAGE */}
-            <div className="min-w-[800px] h-[500px] relative rounded-xl overflow-hidden">
-              <Image
-                src="/about.png"
-                alt="Service"
-                fill
-                className="object-cover"
-              />
-            </div>
 
-            {/* CARD 7 */}
-            <ServiceCard
-              variant="text"
-              title="Control & Automation Supplies"
-              description="Evostel empowers industries to achieve smarter operations through a full suite of control and automation products."
-              color="bg-purple-200 text-black"
-              buttonStyle="dark"
-            />
+            <ImageCard />
           </div>
 
           {/* CONTROLS */}
           <div className="flex items-center justify-between mt-20">
-            {/* PROGRESS BAR */}
+            {/* ✅ REAL PROGRESS BAR */}
             <div className="flex-1 h-[3px] bg-gray-200 rounded-full overflow-hidden mr-6">
-              <div className="w-1/3 h-full bg-gray-700" />
+              <div
+                className="h-full bg-gray-700 transition-all duration-200"
+                style={{ width: `${progress}%` }}
+              />
             </div>
 
             {/* BUTTONS */}
@@ -146,7 +133,6 @@ function ServiceCard({
   color,
   buttonStyle = "light",
 }: {
-  variant: "text";
   title: string;
   description: string;
   color: string;
@@ -168,6 +154,14 @@ function ServiceCard({
       >
         Read more
       </button>
+    </div>
+  );
+}
+
+function ImageCard() {
+  return (
+    <div className="min-w-[800px] h-[500px] relative rounded-xl overflow-hidden">
+      <Image src="/about.png" alt="Service" fill className="object-cover" />
     </div>
   );
 }
