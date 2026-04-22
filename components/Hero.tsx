@@ -24,8 +24,9 @@ export default function Hero() {
           {/* LEFT TEXT */}
           <div className="max-w-xl">
             <h1 className="text-white text-4xl md:text-6xl font-light leading-tight">
-              Experience <br />
-              Delivers Solutions
+              Trusted
+              <br />
+              MEP Engineering
             </h1>
           </div>
 
