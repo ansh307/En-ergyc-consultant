@@ -3,8 +3,11 @@
 import { useRef, useState, useEffect, useLayoutEffect } from "react";
 import { Menu, X } from "lucide-react";
 import gsap from "gsap";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -104,33 +107,47 @@ export default function Navbar() {
         className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 md:px-32 py-6 transition-all duration-300 `}
       >
         {/* LOGO */}
-        <div
+        <Link
+          href="/"
           className={`font-semibold tracking-widest transition-colors duration-300 ${
             scrolled ? "text-black" : "text-white"
           }`}
         >
           En-ergyc
-        </div>
+        </Link>
 
         {/* CENTER NAV */}
         <div className="hidden lg:flex bg-white rounded-full px-6 py-2 gap-6 text-sm shadow-md">
-          <NavItem label="Home" active />
-          <NavItem label="About us" />
-          <NavItem label="Industries & Services" />
-          <NavItem label="The experience" />
+          <NavItem label="Home" href="/" active={pathname === "/"} />
+          <NavItem
+            label="About us"
+            href="/about-us"
+            active={pathname === "/about-us"}
+          />
+          <NavItem
+            label="Industries & Services"
+            href="/services"
+            active={pathname === "/services"}
+          />
+          <NavItem
+            label="Testimonials"
+            href="/Testimonials"
+            active={pathname === "/Testimonials"}
+          />
         </div>
 
         {/* RIGHT */}
         <div className="flex items-center gap-3">
-          <button
+          <Link
+            href="/contact-us"
             className={`hidden md:block px-4 py-2 rounded-md text-sm transition ${
               scrolled
-                ? " bg-white shadow-md text-black hover:bg-stone-200"
-                : " bg-white text-black hover:bg-stone-200"
+                ? "bg-white shadow-md text-black hover:bg-stone-200"
+                : "bg-white text-black hover:bg-stone-200"
             }`}
           >
             • Contact us
-          </button>
+          </Link>
 
           <button
             onClick={toggleMenu}
@@ -159,9 +176,16 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-3">
-            <button className="hidden md:block border border-black text-black px-4 py-2 rounded-md text-sm hover:scale-105 transition">
+            <Link
+              href="/contact-us"
+              className={`hidden md:block px-4 py-2 rounded-md text-sm transition ${
+                scrolled
+                  ? "bg-white shadow-md text-black hover:bg-stone-200"
+                  : "bg-white text-black hover:bg-stone-200"
+              }`}
+            >
               • Contact us
-            </button>
+            </Link>
 
             <button
               onClick={toggleMenu}
@@ -177,28 +201,40 @@ export default function Navbar() {
           <MenuColumn
             title="Company"
             items={[
-              "About",
-              "Career",
-              "The Experience",
-              "Partners",
-              "Customers",
+              { label: "About", href: "/about-us" },
+              { label: "Customers", href: "/customers" },
             ]}
           />
 
           <MenuColumn
             title="Services"
             items={[
-              "Electrical services",
-              "Airport lighting and Aviation Services",
-              "HVAC, Fire Fighting & Mechanical supplies",
-              "Control & Automation Supplies",
-              "Electrical Supplies",
+              { label: "Electrical services", href: "/services/electrical" },
+              {
+                label: "Airport lighting and Aviation Services",
+                href: "/services/airport-lighting",
+              },
+              {
+                label: "HVAC, Fire Fighting & Mechanical supplies",
+                href: "/services/hvac-fire",
+              },
+              {
+                label: "Control & Automation Supplies",
+                href: "/services/control-automation",
+              },
+              {
+                label: "Electrical Supplies",
+                href: "/services/electrical-supplies",
+              },
             ]}
           />
 
           <MenuColumn
             title="Resources"
-            items={["Blog & News", "Success Stories"]}
+            items={[
+              { label: "Blog & News", href: "/blog" },
+              { label: "Success Stories", href: "/success-stories" },
+            ]}
           />
         </div>
       </div>
@@ -208,26 +244,43 @@ export default function Navbar() {
 
 // ================= COMPONENTS =================
 
-function NavItem({ label, active }: { label: string; active?: boolean }) {
+function NavItem({
+  label,
+  href,
+  active,
+}: {
+  label: string;
+  href: string;
+  active?: boolean;
+}) {
   return (
-    <span
-      className={`px-3 py-1 rounded-full cursor-pointer transition ${
+    <Link
+      href={href}
+      className={`px-3 py-1 rounded-full transition ${
         active ? "bg-stone-800 text-white" : "text-gray-700 hover:text-black"
       }`}
     >
       {label}
-    </span>
+    </Link>
   );
 }
 
-function MenuColumn({ title, items }: { title: string; items: string[] }) {
+function MenuColumn({
+  title,
+  items,
+}: {
+  title: string;
+  items: { label: string; href: string }[];
+}) {
   return (
     <div>
       <h3 className="text-sm text-stone-400 mb-4">{title}</h3>
       <ul className="space-y-3">
         {items.map((item, i) => (
-          <li key={i} className="hover:text-black cursor-pointer">
-            {item}
+          <li key={i}>
+            <Link href={item.href} className="hover:text-black transition">
+              {item.label}
+            </Link>
           </li>
         ))}
       </ul>

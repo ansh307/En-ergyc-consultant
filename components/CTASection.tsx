@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function CTASection() {
   return (
     <section
@@ -26,9 +28,12 @@ export default function CTASection() {
           electrify your vision and bring it to life.
         </p>
 
-        <button className="mt-8 bg-stone-100 text-black px-6 py-3 rounded-md text-sm font-medium hover:scale-105 transition">
+        <Link
+          href="/book-a-meeting"
+          className="mt-8 bg-stone-100 text-black px-6 py-3 rounded-md text-sm font-medium hover:scale-105 transition inline-block"
+        >
           Book An Appointment →
-        </button>
+        </Link>
       </div>
     </section>
   );
