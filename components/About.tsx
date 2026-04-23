@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -23,9 +24,12 @@ export default function About() {
               IoT technologies.
             </h2>
 
-            <button className="mt-8 bg-stone-800 text-white px-6 py-3 rounded-md text-sm hover:scale-105 transition flex items-center gap-2">
+            <Link
+              href="/about-us"
+              className="mt-8 bg-stone-800 text-white px-6 py-3 rounded-md text-sm hover:scale-105 transition flex items-center gap-2"
+            >
               About us →
-            </button>
+            </Link>
           </div>
 
           {/* RIGHT IMAGE */}
