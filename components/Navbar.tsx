@@ -148,9 +148,9 @@ export default function Navbar() {
       {/* ================= OVERLAY ================= */}
       <div
         ref={overlayRef}
-        className={`fixed w-[95%] bg-white z-50 px-10 md:px-20 mt-4 mx-12 py-16 rounded-2xl shadow-lg
-${open ? "pointer-events-auto" : "pointer-events-none"}
-opacity-0 -translate-y-full`}
+        className={`fixed top-0 left-0 right-0 mx-auto w-[95%] mt-4 bg-white z-50 px-10 md:px-20 py-16 rounded-2xl shadow-lg
+  ${open ? "pointer-events-auto" : "pointer-events-none"}
+  opacity-0 -translate-y-full`}
       >
         {/* INNER NAVBAR */}
         <div className="absolute top-0 left-0 w-full flex items-center justify-between px-6 md:px-20 py-6">
