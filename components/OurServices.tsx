@@ -2,11 +2,40 @@
 
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import {
+  Zap,
+  Flame,
+  Sun,
+  Bolt,
+  Building2,
+  Droplets,
+  Shield,
+  AlertTriangle,
+  BatteryCharging,
+  Car,
+  Calculator,
+  ClipboardCheck,
+  ArrowLeft,
+  ArrowRight,
+} from "lucide-react";
 
 export default function OurServices() {
   const sliderRef = useRef<HTMLDivElement>(null);
   const [progress, setProgress] = useState(0);
+
+  const services = [
+    { icon: Zap, label: "Power Distribution" },
+    { icon: Shield, label: "Fire and Life Safety" },
+    { icon: Bolt, label: "Temporary Power Design" },
+    { icon: Sun, label: "Solar Power System Design" },
+    { icon: Building2, label: "HVAC System" },
+    { icon: Droplets, label: "Plumbing Design" },
+    { icon: Flame, label: "Sprinkler System Design" },
+    { icon: AlertTriangle, label: "Fire Alarm System Design" },
+    { icon: BatteryCharging, label: "Emergency Power Design" },
+    { icon: Car, label: "EV Charger Infrastructure Design" },
+    { icon: Calculator, label: "Electrical Cost Estimation" },
+  ];
 
   // ✅ FIXED SCROLL (responsive)
   const scroll = (dir: "left" | "right") => {
@@ -67,11 +96,28 @@ export default function OurServices() {
             ref={sliderRef}
             className="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar"
           >
-            <ServiceCard
-              title="Electric Supplies"
-              description="High-quality electric supplies for industrial and infrastructure projects."
-              color="bg-teal-500 text-white"
-            />
+            <div className="min-w-[400px] h-[500px] rounded-xl p-8 bg-teal-500 text-white flex flex-col">
+              {/* TITLE */}
+              <h3 className="text-2xl font-medium mb-6">
+                Electrical & Engineering Services
+              </h3>
+
+              {/* SERVICES LIST */}
+              <div className="grid grid-cols-1 gap-3 overflow-y-auto pr-2">
+                {services.map((item, i) => {
+                  const Icon = item.icon;
+                  return (
+                    <div
+                      key={i}
+                      className="flex items-center gap-3 text-sm opacity-90 hover:opacity-100 transition"
+                    >
+                      <Icon size={16} className="text-white/90" />
+                      <span>{item.label}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
 
             <ImageCard />
 
