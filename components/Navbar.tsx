@@ -113,7 +113,7 @@ export default function Navbar() {
         </div>
 
         {/* CENTER NAV */}
-        <div className="hidden md:flex bg-white rounded-full px-6 py-2 gap-6 text-sm shadow-md">
+        <div className="hidden lg:flex bg-white rounded-full px-6 py-2 gap-6 text-sm shadow-md">
           <NavItem label="Home" active />
           <NavItem label="About us" />
           <NavItem label="Industries & Services" />

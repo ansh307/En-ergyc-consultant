@@ -4,17 +4,17 @@ import Image from "next/image";
 
 export default function WhyUs() {
   return (
-    <section className="w-full bg-[#f5f5f5] py-20 md:py-28 px-6 md:px-32">
+    <section className="w-full bg-[#f5f5f5] py-10 md:py-28 px-6 md:px-32">
       <div className="max-w-7xl mx-auto">
         {/* TOP LABEL */}
         <div className="grid md:grid-cols-3 gap-4 items-start">
-          <p className="text-sm text-gray-500 mb-20 flex items-center gap-2">
+          <p className="text-sm text-gray-500 mb-4 flex items-center gap-2">
             <span className="w-2 h-2 bg-gray-400 rounded-full" />
             Why Us
           </p>
 
           {/* HEADING */}
-          <div className="max-w-lg mb-12 text-balance mx-auto">
+          <div className="max-w-lg md:mb-12 text-balance md:mx-auto col-span-2 xl:col-span-1">
             <h2 className="text-3xl md:text-5xl font-medium text-gray-900 leading-tight">
               Powering the Future of Industry
             </h2>
@@ -28,7 +28,7 @@ export default function WhyUs() {
         </div>
 
         {/* CARDS */}
-        <div className="grid md:grid-cols-3 gap-8 mt-14">
+        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mt-14">
           <WhyCard
             image="/about.png"
             title="Where Innovation Ignites Industry"

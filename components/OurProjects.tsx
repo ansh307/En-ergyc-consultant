@@ -38,16 +38,16 @@ export default function OurProjects() {
   }, []);
 
   return (
-    <section className="w-full bg-[#f5f5f5] py-20 md:py-28 px-6 md:px-32">
+    <section className="w-full bg-[#f5f5f5] py-10 md:py-28 px-6 md:px-32">
       <div className="max-w-7xl mx-auto">
         {/* HEADER */}
         <div className="grid md:grid-cols-3 gap-4 items-start">
-          <p className="text-sm text-gray-500 mb-20 flex items-center gap-2">
+          <p className="text-sm text-gray-500 mb-4 flex items-center gap-2">
             <span className="w-2 h-2 bg-gray-400 rounded-full" />
             Our Projects
           </p>
 
-          <div className="max-w-lg mb-32 text-balance mx-auto">
+          <div className="max-w-lg md:mb-32 text-balance md:mx-auto col-span-2 xl:col-span-1">
             <h2 className="text-3xl md:text-5xl font-medium text-gray-900 leading-tight">
               Recent Projects
             </h2>
@@ -60,7 +60,7 @@ export default function OurProjects() {
         </div>
 
         {/* SLIDER */}
-        <div className="relative">
+        <div className="relative md:mt-0 mt-14">
           <div
             ref={sliderRef}
             className="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar"
@@ -91,7 +91,7 @@ export default function OurProjects() {
           </div>
 
           {/* CONTROLS */}
-          <div className="flex items-center justify-between mt-20">
+          <div className="flex items-center justify-between mt-14 md:mt-20">
             {/* PROGRESS BAR */}
             <div className="flex-1 h-[3px] bg-gray-200 rounded-full overflow-hidden mr-6">
               <div

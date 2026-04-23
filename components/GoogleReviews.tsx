@@ -64,16 +64,16 @@ export default function GoogleReviews() {
   ];
 
   return (
-    <section className="w-full bg-[#f5f5f5] py-20 md:py-28 px-6 md:px-32">
+    <section className="w-full bg-[#f5f5f5] py-10 md:py-28 px-6 md:px-32">
       <div className="max-w-7xl mx-auto">
         {/* HEADER */}
         <div className="grid md:grid-cols-3 gap-4 items-start">
-          <p className="text-sm text-gray-500 mb-20 flex items-center gap-2">
+          <p className="text-sm text-gray-500 mb-4 flex items-center gap-2">
             <span className="w-2 h-2 bg-gray-400 rounded-full" />
             Google Reviews
           </p>
 
-          <div className="max-w-lg mb-32 text-balance mx-auto">
+          <div className="max-w-lg md:mb-32 text-balance md:mx-auto col-span-2 xl:col-span-1">
             <h2 className="text-3xl md:text-5xl font-medium text-gray-900 leading-tight">
               EXCELLENT
             </h2>
@@ -86,7 +86,7 @@ export default function GoogleReviews() {
         </div>
 
         {/* SLIDER WITH FADE EDGES */}
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden md:mt-0 mt-14">
           {/* LEFT FADE */}
           <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#f5f5f5] to-transparent z-10" />
 
