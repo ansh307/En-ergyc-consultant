@@ -9,14 +9,15 @@ export default function WhyUs() {
         {/* TOP LABEL */}
         <div className="grid md:grid-cols-3 gap-4 items-start">
           <p className="text-sm text-gray-500 mb-4 flex items-center gap-2">
-            <span className="w-2 h-2 bg-gray-400 rounded-full" />
+            <span className="w-2 h-2 bg-green-600 rounded-full" />
             Why Us
           </p>
 
           {/* HEADING */}
-          <div className="max-w-lg md:mb-12 text-balance md:mx-auto col-span-2 xl:col-span-1">
+          <div className="max-w-lg md:mb-12 md:mx-auto col-span-2 xl:col-span-1">
             <h2 className="text-3xl md:text-5xl font-medium text-gray-900 leading-tight">
-              Powering the Future of Industry
+              Powering the Future of{" "}
+              <span className="text-green-600">Industry</span>
             </h2>
 
             <p className="mt-4 text-gray-600 text-sm md:text-base">
@@ -64,7 +65,7 @@ function WhyCard({
   return (
     <div className="group">
       {/* IMAGE */}
-      <div className="relative w-full h-[220px] md:h-[350px] rounded-xl overflow-hidden">
+      <div className="relative w-full h-[220px] md:h-[350px] rounded-xl overflow-hidden shadow-sm">
         <Image
           src={image}
           alt={title}
@@ -74,7 +75,7 @@ function WhyCard({
       </div>
 
       {/* TEXT */}
-      <h3 className="mt-8 text-lg md:text-xl font-medium text-gray-900">
+      <h3 className="mt-8 text-lg md:text-xl font-medium text-gray-900  transition">
         {title}
       </h3>
 

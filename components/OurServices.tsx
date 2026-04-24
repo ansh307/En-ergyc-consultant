@@ -74,7 +74,7 @@ export default function OurServices() {
         {/* HEADER */}
         <div className="grid md:grid-cols-3 gap-4 items-start">
           <p className="text-sm text-gray-500 mb-4 flex items-center gap-2">
-            <span className="w-2 h-2 bg-gray-400 rounded-full" />
+            <span className="w-2 h-2 bg-green-600 rounded-full" />
             Our Services
           </p>
 
@@ -94,9 +94,9 @@ export default function OurServices() {
         <div className="relative md:mt-0 mt-14">
           <div
             ref={sliderRef}
-            className="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar"
+            className="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar pb-5"
           >
-            <div className="min-w-[400px] h-[500px] rounded-xl p-8 bg-teal-500 text-white flex flex-col">
+            <div className="min-w-[400px] h-[500px] rounded-xl p-8 bg-green-600 text-white flex flex-col shadow-md">
               {/* TITLE */}
               <h3 className="text-2xl font-medium mb-6">
                 Electrical & Engineering Services
@@ -124,8 +124,9 @@ export default function OurServices() {
             <ServiceCard
               title="Control & Automation"
               description="Smart automation systems to optimize operations."
-              color="bg-purple-200 text-black"
+              color="bg-white text-black"
               buttonStyle="dark"
+              isTextonly
             />
 
             <ImageCard />
@@ -133,8 +134,9 @@ export default function OurServices() {
             <ServiceCard
               title="Advanced Systems"
               description="Cutting-edge industrial solutions."
-              color="bg-purple-200 text-black"
+              color="bg-white text-black"
               buttonStyle="dark"
+              isTextonly
             />
 
             <ImageCard />
@@ -178,28 +180,36 @@ function ServiceCard({
   description,
   color,
   buttonStyle = "light",
+  isTextonly = false,
 }: {
   title: string;
   description: string;
   color: string;
-  buttonStyle?: "light" | "dark";
+  buttonStyle?: "light" | "dark" | "green";
+  isTextonly?: boolean;
 }) {
   return (
     <div
-      className={`min-w-[400px] h-[500px] rounded-xl p-8 flex flex-col justify-between ${color}`}
+      className={`min-w-[400px] h-[500px] rounded-xl p-8 flex flex-col justify-between ${color} shadow-md`}
     >
       <div>
         <h3 className="text-2xl font-medium">{title}</h3>
         <p className="mt-4 text-sm opacity-80">{description}</p>
       </div>
 
-      <button
-        className={`w-fit px-4 py-2 rounded-md text-sm ${
-          buttonStyle === "dark" ? "bg-black text-white" : "bg-white text-black"
-        }`}
-      >
-        Read more
-      </button>
+      {!isTextonly && (
+        <button
+          className={`w-fit px-4 py-2 rounded-md text-sm ${
+            buttonStyle === "dark"
+              ? "bg-black text-white"
+              : buttonStyle === "green"
+                ? "bg-green-600 text-white"
+                : "bg-white text-black"
+          }`}
+        >
+          Read more
+        </button>
+      )}
     </div>
   );
 }

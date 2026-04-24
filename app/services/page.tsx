@@ -117,7 +117,7 @@ export default function ServicesPage() {
                   className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition"
                 >
                   {/* ICON */}
-                  <div className="text-teal-600 mb-4">
+                  <div className="text-green-600 mb-4">
                     <Icon size={24} />
                   </div>
 

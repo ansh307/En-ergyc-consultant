@@ -146,7 +146,7 @@ export default function Navbar() {
                 : "bg-white text-black hover:bg-stone-200"
             }`}
           >
-            • Contact us
+            Contact us
           </Link>
 
           <button
@@ -184,7 +184,7 @@ export default function Navbar() {
                   : "bg-white text-black hover:bg-stone-200"
               }`}
             >
-              • Contact us
+              Contact us
             </Link>
 
             <button
@@ -212,6 +212,7 @@ export default function Navbar() {
           />
 
           <MenuColumn
+            isHiddenOnMobile
             onClick={() => setOpen(false)}
             title="Core Services"
             items={[
@@ -224,6 +225,7 @@ export default function Navbar() {
           />
 
           <MenuColumn
+            isHiddenOnMobile
             onClick={() => setOpen(false)}
             title="Engineering Services"
             items={[
@@ -255,7 +257,7 @@ function NavItem({
     <Link
       href={href}
       className={`px-3 py-1 rounded-full transition ${
-        active ? "bg-stone-800 text-white" : "text-gray-700 hover:text-black"
+        active ? "bg-green-600 text-white" : "text-gray-700 hover:text-black"
       }`}
     >
       {label}
@@ -267,13 +269,15 @@ function MenuColumn({
   title,
   items,
   onClick,
+  isHiddenOnMobile = false,
 }: {
   title: string;
   items: { label: string; href: string }[];
   onClick?: () => void;
+  isHiddenOnMobile?: boolean;
 }) {
   return (
-    <div>
+    <div className={`${isHiddenOnMobile ? "hidden md:block" : ""}`}>
       <h3 className="text-sm text-stone-400 mb-4">{title}</h3>
       <ul className="space-y-3">
         {items.map((item, i) => (

@@ -49,7 +49,8 @@ export default function AboutPage() {
           {/* ================= INTRO ================= */}
           <div className="max-w-3xl">
             <h2 className="text-3xl md:text-5xl font-medium text-gray-900 leading-tight">
-              Ontario’s Trusted MEP Engineering Experts
+              Ontario’s Trusted{" "}
+              <span className="text-green-600">MEP Engineering Experts</span>
             </h2>
             <p className="mt-4 text-gray-600">Where We Build Your Visions</p>
           </div>
@@ -113,7 +114,7 @@ export default function AboutPage() {
                     className="flex items-center gap-4 group cursor-pointer"
                   >
                     {/* ICON */}
-                    <div className="text-teal-600 group-hover:scale-110 transition">
+                    <div className="text-green-600 group-hover:scale-110 transition">
                       <Icon size={20} strokeWidth={2} />
                     </div>
 
@@ -130,7 +131,8 @@ export default function AboutPage() {
           {/* ================= ELECTRIFICATION ================= */}
           <div className="max-w-4xl space-y-6">
             <h3 className="text-2xl md:text-3xl font-medium text-gray-900">
-              Fleet / Transit Electrification
+              Fleet / Transit{" "}
+              <span className="text-green-600">Electrification</span>
             </h3>
 
             <p className="text-gray-700 leading-relaxed text-sm md:text-base">

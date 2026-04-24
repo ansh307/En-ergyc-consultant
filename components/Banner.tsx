@@ -33,7 +33,7 @@ export default function Banner({
           {/* OPTIONAL LABEL */}
           {label && (
             <p className="text-sm text-white/70 mb-4 flex items-center gap-2">
-              <span className="w-2 h-2 bg-white/70 rounded-full" />
+              <span className="w-2 h-2 bg-green-600 rounded-full" />
               {label}
             </p>
           )}

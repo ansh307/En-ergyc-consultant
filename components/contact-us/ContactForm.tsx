@@ -8,11 +8,6 @@ export default function ContactForm() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-24">
         {/* ================= LEFT: FORM ================= */}
         <div>
-          <p className="text-sm text-gray-500 mb-4 flex items-center gap-2">
-            <span className="w-2 h-2 bg-gray-400 rounded-full" />
-            Get in Touch
-          </p>
-
           <h2 className="text-3xl md:text-5xl font-medium text-gray-900 mb-8">
             Send Us A Message
           </h2>
@@ -110,7 +105,7 @@ export default function ContactForm() {
               <MapPin size={20} />
               <div>
                 <p className="font-medium text-gray-900">Our Location</p>
-                <p className="text-sm">6850 Falcon JP 244, Ohio, ON L5N 4J9</p>
+                <p className="text-sm">Toronto Ontario, Canada</p>
               </div>
             </div>
 

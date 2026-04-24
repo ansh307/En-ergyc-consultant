@@ -33,3 +33,14 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+
+@layer base {
+  ::selection {
+    @apply bg-green-500 text-white;
+  }
+
+  ::-moz-selection {
+    @apply bg-green-500 text-white;
+  }
+}

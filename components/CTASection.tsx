@@ -30,7 +30,7 @@ export default function CTASection() {
 
         <Link
           href="/book-a-meeting"
-          className="mt-8 bg-stone-100 text-black px-6 py-3 rounded-md text-sm font-medium hover:scale-105 transition inline-block"
+          className="mt-8 bg-green-500 text-black px-6 py-3 rounded-md text-sm font-medium hover:scale-105 transition inline-block"
         >
           Book An Appointment →
         </Link>

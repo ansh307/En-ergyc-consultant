@@ -43,7 +43,7 @@ export default function OurProjects() {
         {/* HEADER */}
         <div className="grid md:grid-cols-3 gap-4 items-start">
           <p className="text-sm text-gray-500 mb-4 flex items-center gap-2">
-            <span className="w-2 h-2 bg-gray-400 rounded-full" />
+            <span className="w-2 h-2 bg-green-600 rounded-full" />
             Our Projects
           </p>
 
