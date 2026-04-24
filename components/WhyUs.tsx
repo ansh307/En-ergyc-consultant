@@ -31,19 +31,19 @@ export default function WhyUs() {
         {/* CARDS */}
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mt-14">
           <WhyCard
-            image="/about.png"
+            image="/why-1.jpg"
             title="Where Innovation Ignites Industry"
             description="Welcome to En-ergyc, a leading provider with expertise in electrical, control, automation, aviation, runway lighting systems, airport technologies, digital, and IoT supplies for various industries."
           />
 
           <WhyCard
-            image="/about.png"
+            image="/why-2.jpg"
             title="Transformative Technology for Industry Leaders"
             description="At En-ergyc, we are committed to providing customized supplies that meet market’s unique needs."
           />
 
           <WhyCard
-            image="/about.png"
+            image="/why-3.jpg"
             title="Setting New Standards"
             description="Our service team are expert and equipped with the latest tools and technologies to design, engineer, test, and energize electrical solutions that serve the industries."
           />
@@ -72,6 +72,8 @@ function WhyCard({
           fill
           className="object-cover group-hover:scale-105 transition duration-500"
         />
+        {/* dark overlay */}
+        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition duration-500" />
       </div>
 
       {/* TEXT */}
