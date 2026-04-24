@@ -119,27 +119,27 @@ export default function OurServices() {
               </div>
             </div>
 
-            <ImageCard />
+            <ImageCard img="/service-1.png" />
 
             <ServiceCard
-              title="Control & Automation"
-              description="Smart automation systems to optimize operations."
+              title="Smart Engineering Solutions"
+              description="We deliver intelligent electrical and engineering systems designed for reliability, efficiency, and long-term performance. From power distribution to HVAC, fire safety, and EV infrastructure, our solutions are tailored to meet modern industry demands."
               color="bg-white text-black"
               buttonStyle="dark"
               isTextonly
             />
 
-            <ImageCard />
+            <ImageCard img="/service-2.png" />
 
             <ServiceCard
-              title="Advanced Systems"
-              description="Cutting-edge industrial solutions."
+              title="Built for Safety & Sustainability"
+              description="Our approach combines advanced design with sustainable practices to ensure safe, energy-efficient environments. Whether it’s solar power systems, emergency power, or automation, we create solutions that support both operational excellence and future growth."
               color="bg-white text-black"
               buttonStyle="dark"
               isTextonly
             />
 
-            <ImageCard />
+            <ImageCard img="/service-3.png" />
           </div>
 
           {/* CONTROLS */}
@@ -194,7 +194,7 @@ function ServiceCard({
     >
       <div>
         <h3 className="text-2xl font-medium">{title}</h3>
-        <p className="mt-4 text-sm opacity-80">{description}</p>
+        <p className="mt-4 text-md opacity-80">{description}</p>
       </div>
 
       {!isTextonly && (
@@ -214,10 +214,10 @@ function ServiceCard({
   );
 }
 
-function ImageCard() {
+function ImageCard({ img }: { img: string }) {
   return (
     <div className="min-w-[800px] h-[500px] relative rounded-xl overflow-hidden">
-      <Image src="/about.png" alt="Service" fill className="object-cover" />
+      <Image src={img} alt="Service" fill className="object-cover" />
     </div>
   );
 }

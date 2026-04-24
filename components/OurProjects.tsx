@@ -66,25 +66,25 @@ export default function OurProjects() {
             className="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar"
           >
             <ProjectCard
-              image="/about.png"
+              image="/project-1.png"
               title="Power Infrastructure Upgrade"
               description="Modernized electrical grid systems with advanced transformers and automation."
             />
 
             <ProjectCard
-              image="/about.png"
+              image="/project-2.jpg"
               title="Industrial Automation System"
               description="Implemented smart automation for enhanced productivity and safety."
             />
 
             <ProjectCard
-              image="/about.png"
+              image="/project-3.jpg"
               title="Airport Lighting Solutions"
               description="Delivered high-performance runway lighting systems for aviation safety."
             />
 
             <ProjectCard
-              image="/about.png"
+              image="/project-4.jpg"
               title="IoT Smart Facility"
               description="Integrated IoT systems for real-time monitoring and control."
             />
