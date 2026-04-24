@@ -125,14 +125,14 @@ export default function Navbar() {
             active={pathname === "/about-us"}
           />
           <NavItem
+            label="Projects"
+            href="/projects"
+            active={pathname === "/projects"}
+          />
+          <NavItem
             label="Industries & Services"
             href="/services"
             active={pathname === "/services"}
-          />
-          <NavItem
-            label="Testimonials"
-            href="/Testimonials"
-            active={pathname === "/Testimonials"}
           />
         </div>
 
@@ -199,41 +199,39 @@ export default function Navbar() {
         {/* MENU CONTENT */}
         <div className="grid md:grid-cols-3 gap-12 text-gray-800 mt-16">
           <MenuColumn
-            title="Company"
+            onClick={() => setOpen(false)}
+            title="Quick Links"
             items={[
-              { label: "About", href: "/about-us" },
-              { label: "Customers", href: "/customers" },
+              { label: "Home", href: "/" },
+              { label: "About Us", href: "/about-us" },
+              { label: "Projects", href: "/projects" },
+              { label: "Free Consultation", href: "/book-a-meeting" },
+              { label: "Services", href: "/services" },
+              { label: "Contact Us", href: "/contact-us" },
             ]}
           />
 
           <MenuColumn
-            title="Services"
+            onClick={() => setOpen(false)}
+            title="Core Services"
             items={[
-              { label: "Electrical services", href: "/services/electrical" },
-              {
-                label: "Airport lighting and Aviation Services",
-                href: "/services/airport-lighting",
-              },
-              {
-                label: "HVAC, Fire Fighting & Mechanical supplies",
-                href: "/services/hvac-fire",
-              },
-              {
-                label: "Control & Automation Supplies",
-                href: "/services/control-automation",
-              },
-              {
-                label: "Electrical Supplies",
-                href: "/services/electrical-supplies",
-              },
+              { label: "Power Distribution", href: "/services" },
+              { label: "Fire & Life Safety", href: "/services" },
+              { label: "Temporary Power Design", href: "/services" },
+              { label: "Solar Power Systems", href: "/services" },
+              { label: "Emergency Power Design", href: "/services" },
             ]}
           />
 
           <MenuColumn
-            title="Resources"
+            onClick={() => setOpen(false)}
+            title="Engineering Services"
             items={[
-              { label: "Blog & News", href: "/blog" },
-              { label: "Success Stories", href: "/success-stories" },
+              { label: "HVAC Systems", href: "/services" },
+              { label: "Plumbing Design", href: "/services" },
+              { label: "Sprinkler Systems", href: "/services" },
+              { label: "EV Charging Infrastructure", href: "/services" },
+              { label: "Construction Review", href: "/services" },
             ]}
           />
         </div>
@@ -268,9 +266,11 @@ function NavItem({
 function MenuColumn({
   title,
   items,
+  onClick,
 }: {
   title: string;
   items: { label: string; href: string }[];
+  onClick?: () => void;
 }) {
   return (
     <div>
@@ -278,7 +278,11 @@ function MenuColumn({
       <ul className="space-y-3">
         {items.map((item, i) => (
           <li key={i}>
-            <Link href={item.href} className="hover:text-black transition">
+            <Link
+              href={item.href}
+              className="hover:text-black transition"
+              onClick={onClick}
+            >
               {item.label}
             </Link>
           </li>

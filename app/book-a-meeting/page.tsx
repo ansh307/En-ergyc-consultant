@@ -1,5 +1,5 @@
 import BookingSection from "@/components/book-a-meeting/BookingSection";
-import Banner from "@/components/contact-us/Banner";
+import Banner from "@/components/Banner";
 import React from "react";
 
 const BookAMeetingPage = () => {

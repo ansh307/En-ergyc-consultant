@@ -82,7 +82,7 @@ export default function ContactForm() {
               <Phone size={20} />
               <div>
                 <p className="font-medium text-gray-900">Call Us</p>
-                <p className="text-sm">905-586-4114</p>
+                <p className="text-sm">905-123-1234</p>
               </div>
             </div>
 
@@ -110,9 +110,7 @@ export default function ContactForm() {
               <MapPin size={20} />
               <div>
                 <p className="font-medium text-gray-900">Our Location</p>
-                <p className="text-sm">
-                  6850 Millcreek Dr Unit 106, Mississauga, ON L5N 4J9
-                </p>
+                <p className="text-sm">6850 Falcon JP 244, Ohio, ON L5N 4J9</p>
               </div>
             </div>
 

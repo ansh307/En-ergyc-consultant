@@ -1,4 +1,4 @@
-import Banner from "@/components/contact-us/Banner";
+import Banner from "@/components/Banner";
 import ContactForm from "@/components/contact-us/ContactForm";
 import React from "react";
 

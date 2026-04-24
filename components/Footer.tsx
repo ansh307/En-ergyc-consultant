@@ -61,12 +61,12 @@ export default function Footer() {
             <div className="space-y-4 text-sm text-white/70">
               <div className="flex items-start gap-3">
                 <MapPin size={16} className="mt-1" />
-                <p>6850 Millcreek Dr Unit 106, Mississauga, ON L5N 4J9</p>
+                <p>6850 Falcon JP 244, Ohio, ON L5N 4J9</p>
               </div>
 
               <div className="flex items-center gap-3">
                 <Phone size={16} />
-                <p>905-586-4114</p>
+                <p>905-123-1234</p>
               </div>
 
               <div className="flex items-center gap-3">

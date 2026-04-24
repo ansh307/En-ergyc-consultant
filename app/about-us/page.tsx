@@ -1,6 +1,6 @@
 "use client";
 
-import Banner from "@/components/contact-us/Banner";
+import Banner from "@/components/Banner";
 
 import {
   Zap,

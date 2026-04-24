@@ -26,7 +26,7 @@ export default function About() {
 
             <Link
               href="/about-us"
-              className="mt-8 bg-stone-800 text-white px-6 py-3 rounded-md text-sm hover:scale-105 transition flex items-center gap-2"
+              className="mt-8 bg-stone-800 text-white px-6 py-3 rounded-md text-sm hover:scale-105 transition items-center gap-2 inline-block"
             >
               About us →
             </Link>
