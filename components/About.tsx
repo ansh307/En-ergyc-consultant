@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function About() {
   return (
     <section className="w-full bg-[#f5f5f5] pt-20 pb-10 md:py-28 px-6 md:px-32 relative">
-      <div className="absolute inset-0 ">
+      <div className="absolute inset-0 pointer-events-none">
         {/* Pattern */}
         <Image
           src="/bg-pattern.png"
@@ -16,7 +16,7 @@ export default function About() {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto ">
         {/* Top Label */}
         <p className="text-sm text-gray-500 mb-14 lg:mb-48 flex items-center gap-2">
           <span className="w-2 h-2 bg-green-600 rounded-full" />
