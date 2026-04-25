@@ -40,7 +40,7 @@ export default function AboutPage() {
         label="About Us"
         title="En-ergyc Consultant"
         subtitle="Ontario’s Trusted MEP Engineering Experts — Where We Build Your Visions"
-        image="/cta-3.jpg"
+        image="/banner-3.jpg"
       />
 
       {/* ================= MAIN CONTENT ================= */}

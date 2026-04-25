@@ -88,7 +88,7 @@ export default function ServicesPage() {
         label="Services"
         title="What We Offer"
         subtitle="Comprehensive Electrical & MEP Engineering Solutions Across Ontario"
-        image="/cta-3.jpg"
+        image="/banner-1.jpg"
       />
 
       {/* ================= CONTENT ================= */}

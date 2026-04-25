@@ -9,7 +9,7 @@ const ContactUsPage = () => {
         label="Contact"
         title="Get in Touch"
         subtitle="Have a project in mind or need expert consultation? Reach out to us and let’s build something powerful together."
-        image="/cta-3.jpg"
+        image="/contact-banner.jpg"
       />
       <ContactForm />
     </div>

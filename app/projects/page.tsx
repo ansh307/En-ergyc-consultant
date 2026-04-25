@@ -6,28 +6,28 @@ import Image from "next/image";
 
 const projects = [
   {
-    name: "Residential High-Rise Project",
-    image: "/cta-3.jpg",
+    name: "Power Infrastructure Upgrade",
+    image: "/project-1.png",
   },
   {
-    name: "Commercial Office Building",
-    image: "/cta-3.jpg",
+    name: "Industrial Automation System",
+    image: "/project-2.jpg",
   },
   {
-    name: "Warehouse Electrical Design",
-    image: "/cta-3.jpg",
+    name: "Airport Lighting Solutions",
+    image: "/project-3.jpg",
   },
   {
-    name: "Restaurant HVAC & Plumbing",
-    image: "/cta-3.jpg",
+    name: "IoT Smart Facility",
+    image: "/project-4.jpg",
   },
   {
     name: "EV Charging Infrastructure",
-    image: "/cta-3.jpg",
+    image: "/service-2.png",
   },
   {
     name: "Fire Safety System Installation",
-    image: "/cta-3.jpg",
+    image: "/service-3.png",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function ProjectsPage() {
         label="Our Work"
         title="Projects We Have Built"
         subtitle="Delivering engineering excellence across residential and commercial developments."
-        image="/cta-3.jpg"
+        image="/banner-2.jpg"
       />
 
       {/* ================= PROJECTS ================= */}
