@@ -28,15 +28,14 @@ export default function About() {
           {/* LEFT TEXT */}
           <div className="col-span-5 lg:col-span-3">
             <h2 className="text-2xl md:text-3xl leading-tight text-gray-900 mr-10">
-              Welcome to En ergyc Consultant, delivering scalable electrical,
-              automation, and{" "}
+              En ergyc Consultant delivers advanced electrical, automation, and{" "}
               <span className="text-green-600 font-medium">
                 electrification solutions
               </span>{" "}
-              across industries—from EV fleet infrastructure and smart energy
-              systems to aviation and IoT technologies.
+              for industrial and commercial sectors—covering power distribution,
+              EV infrastructure, smart energy systems, and IoT technologies,
+              built for efficiency and scalability.
             </h2>
-
             {/* CTA */}
             <Link
               href="/about-us"
