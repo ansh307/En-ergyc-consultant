@@ -3,7 +3,7 @@ import CTASection from "@/components/CTASection";
 import GoogleReviews from "@/components/GoogleReviews";
 import Hero from "@/components/Hero";
 import OurProjects from "@/components/OurProjects";
-import OurServices from "@/components/OurServices";
+import OurServices from "@/components/our-services/OurServices";
 import WhyUs from "@/components/WhyUs";
 
 export default function Home() {
