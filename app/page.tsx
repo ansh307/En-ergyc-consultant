@@ -2,7 +2,7 @@ import About from "@/components/About";
 import CTASection from "@/components/CTASection";
 import GoogleReviews from "@/components/GoogleReviews";
 import Hero from "@/components/Hero";
-import OurProjects from "@/components/OurProjects";
+import OurProjects from "@/components/our-projects/OurProjects";
 import OurServices from "@/components/our-services/OurServices";
 import WhyUs from "@/components/WhyUs";
 
