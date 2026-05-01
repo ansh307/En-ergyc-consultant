@@ -96,7 +96,7 @@ export default function ContactForm() {
               <Mail size={20} />
               <div>
                 <p className="font-medium text-gray-900">Our Email</p>
-                <p className="text-sm">info@en-ergyc-consultant.com</p>
+                <p className="text-sm">info@dynabolt.com</p>
               </div>
             </div>
 

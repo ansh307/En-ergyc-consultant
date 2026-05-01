@@ -10,11 +10,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-10 border-b border-white/10 pb-10">
           {/* ABOUT */}
           <div>
-            <h3 className="text-lg font-medium mb-4">En-ergyc-consultant</h3>
+            <h3 className="text-lg font-medium mb-4">Dynabolt</h3>
             <p className="text-sm text-white/70 leading-relaxed">
-              En-ergyc-consultant is a Canadian engineering consulting firm
-              specializing in mechanical and electrical engineering design
-              services for residential and commercial industries.
+              Dynabolt is a Canadian engineering consulting firm specializing in
+              mechanical and electrical engineering design services for
+              residential and commercial industries.
             </p>
           </div>
 
@@ -71,7 +71,7 @@ export default function Footer() {
 
               <div className="flex items-center gap-3">
                 <Mail size={16} />
-                <p>info@en-ergyc-consultant.com</p>
+                <p>info@dynabolt.com</p>
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function Footer() {
 
         {/* BOTTOM */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-6 text-sm text-white/50 gap-4">
-          <p>© 2026 En-ergyc-consultant. All rights reserved.</p>
+          <p>© 2026 Dynabolt. All rights reserved.</p>
           <p>Made by AIMP</p>
         </div>
       </div>

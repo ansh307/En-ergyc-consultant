@@ -21,7 +21,7 @@ export default function WhyUs() {
             </h2>
 
             <p className="why-subtext mt-4 text-gray-600 text-sm md:text-base">
-              En-ergyc delivers cutting-edge technologies, tailored solutions,
+              Dynabolt delivers cutting-edge technologies, tailored solutions,
               and expert services that drive industrial excellence, innovation,
               and reliability across sectors.
             </p>
@@ -33,13 +33,13 @@ export default function WhyUs() {
           <WhyCard
             image="/why-1.jpg"
             title="Where Innovation Ignites Industry"
-            description="Welcome to En-ergyc, a leading provider with expertise in electrical, control, automation, aviation, runway lighting systems, airport technologies, digital, and IoT supplies for various industries."
+            description="Welcome to Dynabolt, a leading provider with expertise in electrical, control, automation, aviation, runway lighting systems, airport technologies, digital, and IoT supplies for various industries."
           />
 
           <WhyCard
             image="/why-2.jpg"
             title="Transformative Technology for Industry Leaders"
-            description="At En-ergyc, we are committed to providing customized supplies that meet market’s unique needs."
+            description="At Dynabolt, we are committed to providing customized supplies that meet market’s unique needs."
           />
 
           <WhyCard

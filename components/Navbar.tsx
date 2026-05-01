@@ -113,7 +113,7 @@ export default function Navbar() {
             scrolled ? "text-black" : "text-white"
           }`}
         >
-          En-ergyc
+          Dynabolt
         </Link>
 
         {/* CENTER NAV */}
@@ -172,7 +172,7 @@ export default function Navbar() {
         {/* INNER NAVBAR */}
         <div className="absolute top-0 left-0 w-full flex items-center justify-between px-6 md:px-20 py-6">
           <div className="text-black font-semibold tracking-widest">
-            En-ergyc
+            Dynabolt
           </div>
 
           <div className="flex items-center gap-3">

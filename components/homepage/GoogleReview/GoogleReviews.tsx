@@ -5,7 +5,7 @@ export default function GoogleReviews() {
     {
       name: "Michael Turner",
       time: "2 months ago",
-      text: "We partnered with En-ergyc Consultant for a multi-residential project, and their electrical design work was exceptional. The team was responsive, detail-oriented, and helped us avoid costly revisions during approvals.",
+      text: "We partnered with Dynabolt for a multi-residential project, and their electrical design work was exceptional. The team was responsive, detail-oriented, and helped us avoid costly revisions during approvals.",
     },
     {
       name: "Priya Sharma",
@@ -15,7 +15,7 @@ export default function GoogleReviews() {
     {
       name: "David Chen",
       time: "3 months ago",
-      text: "En-ergyc guided us through EV charging infrastructure planning for our facility. Their knowledge of current standards and future scalability gave us a lot of confidence.",
+      text: "Dynabolt guided us through EV charging infrastructure planning for our facility. Their knowledge of current standards and future scalability gave us a lot of confidence.",
     },
     {
       name: "Amit Verma",
@@ -25,7 +25,7 @@ export default function GoogleReviews() {
     {
       name: "Sarah Collins",
       time: "4 months ago",
-      text: "Clear communication, practical solutions, and timely delivery. Working with En-ergyc made our project coordination much easier.",
+      text: "Clear communication, practical solutions, and timely delivery. Working with Dynabolt made our project coordination much easier.",
     },
   ];
   return (
