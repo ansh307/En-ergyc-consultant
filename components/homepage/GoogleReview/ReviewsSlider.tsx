@@ -52,10 +52,10 @@ export default function ReviewsSlider({ reviews }: { reviews: Review[] }) {
   return (
     <div className="relative overflow-hidden md:mt-0 mt-14">
       {/* LEFT FADE */}
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#f5f5f5] to-transparent z-10" />
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-white to-transparent z-10" />
 
       {/* RIGHT FADE */}
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-[#f5f5f5] to-transparent z-10" />
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-white to-transparent z-10" />
 
       {/* SLIDER */}
       <div ref={sliderRef} className="flex gap-6 overflow-hidden pb-5">

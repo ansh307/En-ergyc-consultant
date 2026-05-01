@@ -1,12 +1,13 @@
-// WhyUs.tsx (REMOVE "use client")
+// WhyUs.tsx
 
 import Image from "next/image";
 import WhyUsAnimation from "./WhyUsAnimation";
 
 export default function WhyUs() {
   return (
-    <section className="why-section w-full bg-[#f5f5f5] py-10 md:py-28 px-6 md:px-32">
-      <div className="max-w-7xl mx-auto">
+    <section className="why-section w-full bg-white py-10 md:py-28 px-6 md:px-32 relative">
+      {/* CONTENT */}
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* TOP */}
         <div className="grid md:grid-cols-3 gap-4 items-start">
           <p className=" text-sm text-gray-500 mb-4 flex items-center gap-2">
@@ -29,7 +30,7 @@ export default function WhyUs() {
         </div>
 
         {/* CARDS */}
-        <div className="why-cards grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mt-14">
+        <div className="why-cards grid lg:grid-cols-2 xl:grid-cols-3 gap-10 mt-14 items-stretch">
           <WhyCard
             image="/why-1.jpg"
             title="Where Innovation Ignites Industry"
@@ -40,6 +41,7 @@ export default function WhyUs() {
             image="/why-2.jpg"
             title="Transformative Technology for Industry Leaders"
             description="At DynaBolt Engineering, we are committed to providing customized supplies that meet market’s unique needs."
+            active
           />
 
           <WhyCard
@@ -50,32 +52,45 @@ export default function WhyUs() {
         </div>
       </div>
 
-      {/* 👇 Animation Layer */}
+      {/* Animation Layer */}
       <WhyUsAnimation />
     </section>
   );
 }
 
-function WhyCard({ image, title, description }: any) {
+function WhyCard({ image, title, description, active }: any) {
   return (
-    <div className="why-card group">
-      <div className="why-image relative w-full h-[220px] md:h-[350px] rounded-xl overflow-hidden shadow-sm">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-cover group-hover:scale-105 transition duration-500"
-        />
-        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition duration-500" />
+    <div className="relative h-full group">
+      {/* GREEN OFFSET */}
+      {active && (
+        <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-xl bg-green-500 group-hover:translate-x-0 group-hover:translate-y-0 transition duration-500" />
+      )}
+
+      <div
+        className={`relative bg-[#fafafa] lg:bg-[#fafafa] border border-gray-200 lg:border-gray-200 rounded-xl p-4 transition h-full flex flex-col
+        ${active ? "shadow-[0_10px_30px_rgba(0,0,0,0.08)]" : ""}`}
+      >
+        <div className="relative w-full h-[220px] md:h-[300px] rounded-xl overflow-hidden shadow-sm flex-shrink-0">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover group-hover:scale-105 transition duration-500"
+          />
+          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition duration-500" />
+        </div>
+
+        {/* CONTENT */}
+        <div className="flex flex-col flex-grow">
+          <h3 className="mt-8 text-lg md:text-xl font-medium text-gray-900">
+            {title}
+          </h3>
+
+          <p className="mt-4 text-sm text-gray-600 leading-relaxed flex-grow">
+            {description}
+          </p>
+        </div>
       </div>
-
-      <h3 className="mt-8 text-lg md:text-xl font-medium text-gray-900">
-        {title}
-      </h3>
-
-      <p className="mt-4 text-sm text-gray-600 leading-relaxed">
-        {description}
-      </p>
     </div>
   );
 }

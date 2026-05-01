@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 export default function ContactForm() {
   return (
-    <section className="w-full bg-[#f5f5f5] py-20 md:py-28 px-6 md:px-32">
+    <section className="w-full bg-white py-20 md:py-28 px-6 md:px-32">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-24">
         {/* ================= LEFT: FORM ================= */}
         <div>

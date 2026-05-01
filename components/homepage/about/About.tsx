@@ -6,7 +6,7 @@ import AboutAnimation from "./AboutAnimation";
 
 export default function About() {
   return (
-    <section className="about-section w-full bg-[#f5f5f5] pt-20 pb-10 md:py-28 px-6 md:px-32 relative">
+    <section className="about-section w-full bg-white pt-20 pb-10 md:py-28 px-6 md:px-32 relative">
       <div className="absolute inset-0 pointer-events-none">
         <Image
           src="/bg-pattern.png"
@@ -48,7 +48,7 @@ export default function About() {
           {/* RIGHT IMAGE */}
           <div className="about-image relative w-full h-[260px] md:h-[320px] col-span-5 lg:col-span-2 group">
             {/* GREEN OFFSET BACKGROUND */}
-            <div className="absolute inset-0 translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-500 bg-green-500 rounded-xl" />
+            <div className="absolute inset-0 translate-x-3 translate-y-3 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-500 bg-green-500 rounded-xl" />
 
             {/* MAIN IMAGE */}
             <div className="relative w-full h-full rounded-xl overflow-hidden group shadow-sm">

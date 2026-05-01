@@ -29,7 +29,7 @@ export default function GoogleReviews() {
     },
   ];
   return (
-    <section className="w-full bg-[#f5f5f5] py-10 md:py-28 px-6 md:px-32">
+    <section className="w-full bg-white py-10 md:py-28 px-6 md:px-32">
       <div className="max-w-7xl mx-auto">
         {/* HEADER */}
         <div className="grid md:grid-cols-3 gap-4 items-start">
