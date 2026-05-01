@@ -20,12 +20,13 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.dynabolt.ca"), // 🔁 change this
 
   title: {
-    default: "Dynabolt | Trusted MEP Engineering & Electrification Solutions",
-    template: "%s | Dynabolt",
+    default:
+      "DynaBolt Engineering | Trusted MEP Engineering & Electrification Solutions",
+    template: "%s | DynaBolt Engineering",
   },
 
   description:
-    "Dynabolt delivers advanced MEP engineering solutions including electrical systems, automation, EV infrastructure, smart energy, and IoT technologies for industrial and commercial sectors—built for efficiency, scalability, and reliability.",
+    "DynaBolt Engineering delivers advanced MEP engineering solutions including electrical systems, automation, EV infrastructure, smart energy, and IoT technologies for industrial and commercial sectors—built for efficiency, scalability, and reliability.",
 
   keywords: [
     "MEP Engineering",
@@ -37,16 +38,16 @@ export const metadata: Metadata = {
     "Commercial Engineering Solutions",
   ],
 
-  authors: [{ name: "Dynabolt" }],
-  creator: "Dynabolt",
-  publisher: "Dynabolt",
+  authors: [{ name: "DynaBolt Engineering" }],
+  creator: "DynaBolt Engineering",
+  publisher: "DynaBolt Engineering",
 
   openGraph: {
-    title: "Trusted MEP Engineering Solutions | Dynabolt",
+    title: "Trusted MEP Engineering Solutions | DynaBolt Engineering",
     description:
       "Advanced electrical, automation, EV infrastructure, and smart energy solutions tailored for industrial and commercial projects.",
     url: "https://www.dynabolt.ca", // 🔁 change this
-    siteName: "Dynabolt",
+    siteName: "DynaBolt Engineering",
     images: [
       {
         url: "/og-image.png", // 🔁 add this image in public
@@ -61,7 +62,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Dynabolt | Trusted MEP Engineering",
+    title: "DynaBolt Engineering | Trusted MEP Engineering",
     description:
       "Powering industrial and commercial projects with advanced MEP, EV, and smart energy solutions.",
     images: ["/og-image.png"],
@@ -97,7 +98,7 @@ export default function RootLayout({
               __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "Organization",
-                name: "Dynabolt",
+                name: "DynaBolt Engineering",
                 url: "https://www.dynabolt.ca",
                 logo: "https://www.dynabolt.ca/logo.png",
                 description:

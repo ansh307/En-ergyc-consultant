@@ -28,7 +28,7 @@ export default function About() {
           {/* LEFT TEXT */}
           <div className="col-span-5 lg:col-span-3">
             <h2 className="about-heading text-2xl md:text-3xl leading-tight text-gray-900 mr-10">
-              Dynabolt delivers advanced electrical, automation, and{" "}
+              DynaBolt Engineering delivers advanced electrical, automation, and{" "}
               <span className="text-green-600 font-medium">
                 electrification solutions
               </span>{" "}

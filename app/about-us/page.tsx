@@ -38,7 +38,7 @@ export default function AboutPage() {
       {/* ================= BANNER ================= */}
       <Banner
         label="About Us"
-        title="Dynabolt"
+        title="DynaBolt Engineering"
         subtitle="Ontario’s Trusted MEP Engineering Experts — Where We Build Your Visions"
         image="/banner-3.jpg"
       />
@@ -58,11 +58,11 @@ export default function AboutPage() {
           {/* ================= DESCRIPTION ================= */}
           <div className="max-w-4xl space-y-6 text-gray-700 leading-relaxed text-sm md:text-base">
             <p>
-              Dynabolt is a Canadian engineering consulting firm specializing in
-              comprehensive electrical and mechanical engineering design
-              services for the residential and commercial industries.
-              Incorporated in December 2022, our head office is located in
-              Cambridge, Ontario.
+              DynaBolt Engineering is a Canadian engineering consulting firm
+              specializing in comprehensive electrical and mechanical
+              engineering design services for the residential and commercial
+              industries. Incorporated in December 2022, our head office is
+              located in Cambridge, Ontario.
             </p>
 
             <p>
@@ -79,10 +79,10 @@ export default function AboutPage() {
             </p>
 
             <p>
-              At Dynabolt, we believe innovative engineering solutions drive
-              better outcomes. We bring extensive experience in new builds and
-              renovations including multi-residential buildings (4–40 storeys),
-              restaurants, warehouses, and auto dealerships.
+              At DynaBolt Engineering, we believe innovative engineering
+              solutions drive better outcomes. We bring extensive experience in
+              new builds and renovations including multi-residential buildings
+              (4–40 storeys), restaurants, warehouses, and auto dealerships.
             </p>
 
             <p>
@@ -98,9 +98,9 @@ export default function AboutPage() {
             </h3>
 
             <p className="text-gray-600 mb-8 max-w-3xl">
-              Dynabolt specializes in a wide range of electrical and mechanical
-              engineering services across Ontario for both commercial and
-              residential projects.
+              DynaBolt Engineering specializes in a wide range of electrical and
+              mechanical engineering services across Ontario for both commercial
+              and residential projects.
             </p>
 
             {/* SERVICES GRID */}
@@ -136,7 +136,7 @@ export default function AboutPage() {
             </h3>
 
             <p className="text-gray-700 leading-relaxed text-sm md:text-base">
-              Dynabolt offers expert consulting, design, and system
+              DynaBolt Engineering offers expert consulting, design, and system
               implementation support to help organizations achieve their
               net-zero emission goals. Our solutions are fully scalable and
               adaptable to evolving technologies.
