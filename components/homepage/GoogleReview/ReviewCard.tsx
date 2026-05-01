@@ -72,6 +72,7 @@ export function ReviewCard({
       {/* BUTTON */}
       {text.length > 200 && (
         <button
+          aria-label={expanded ? "Show less" : "Read more"}
           onClick={() => setExpanded((prev) => !prev)}
           className="mt-3 text-sm text-gray-500 hover:text-black"
         >

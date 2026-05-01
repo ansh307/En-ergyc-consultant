@@ -150,6 +150,7 @@ export default function Navbar() {
           </Link>
 
           <button
+            aria-label="Toggle menu"
             onClick={toggleMenu}
             className={`w-10 h-10 flex items-center justify-center rounded-md transition ${
               scrolled
@@ -188,6 +189,7 @@ export default function Navbar() {
             </Link>
 
             <button
+              aria-label="Toggle menu"
               onClick={toggleMenu}
               className="w-10 h-10 flex items-center justify-center border border-black rounded-md text-black hover:scale-105 transition"
             >

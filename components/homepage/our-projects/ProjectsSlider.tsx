@@ -73,6 +73,7 @@ export default function ProjectsSlider() {
 
         <div className="flex gap-3">
           <button
+            aria-label="Scroll left"
             onClick={() => scroll("left")}
             className="w-10 h-10 rounded-full border flex items-center justify-center text-black hover:bg-black hover:text-white transition"
           >
@@ -80,6 +81,7 @@ export default function ProjectsSlider() {
           </button>
 
           <button
+            aria-label="Scroll right"
             onClick={() => scroll("right")}
             className="w-10 h-10 rounded-full border flex items-center justify-center text-black hover:bg-black hover:text-white transition"
           >

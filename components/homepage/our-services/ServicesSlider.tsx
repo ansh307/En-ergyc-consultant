@@ -126,6 +126,7 @@ export default function ServicesSlider() {
         {/* BUTTONS */}
         <div className="flex gap-3">
           <button
+            aria-label="Scroll left"
             onClick={() => scroll("left")}
             className="w-10 h-10 rounded-full border flex items-center justify-center text-black hover:bg-black hover:text-white transition"
           >
@@ -133,6 +134,7 @@ export default function ServicesSlider() {
           </button>
 
           <button
+            aria-label="Scroll right"
             onClick={() => scroll("right")}
             className="w-10 h-10 rounded-full border flex items-center justify-center text-black hover:bg-black hover:text-white transition"
           >
@@ -168,6 +170,7 @@ function ServiceCard({
 
       {!isTextonly && (
         <button
+          aria-label="Read more"
           className={`w-fit px-4 py-2 rounded-md text-sm ${
             buttonStyle === "dark"
               ? "bg-black text-white"

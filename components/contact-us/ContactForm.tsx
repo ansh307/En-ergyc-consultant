@@ -57,6 +57,7 @@ export default function ContactForm() {
 
             {/* Button */}
             <button
+              aria-label="Submit form"
               type="submit"
               className="mt-4 bg-black text-white px-6 py-3 rounded-md text-sm hover:scale-105 transition"
             >
