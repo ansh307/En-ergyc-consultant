@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ReactLenis from "lenis/react";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dynabolt.ca"), // 🔁 change this
+  metadataBase: new URL("https://www.dynabolt.ca"), // 🔁 change this
 
   title: {
     default: "Dynabolt | Trusted MEP Engineering & Electrification Solutions",
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     title: "Trusted MEP Engineering Solutions | Dynabolt",
     description:
       "Advanced electrical, automation, EV infrastructure, and smart energy solutions tailored for industrial and commercial projects.",
-    url: "https://dynabolt.ca", // 🔁 change this
+    url: "https://www.dynabolt.ca", // 🔁 change this
     siteName: "Dynabolt",
     images: [
       {
@@ -88,6 +89,22 @@ export default function RootLayout({
     >
       <ReactLenis root>
         <body className="min-h-full flex flex-col">
+          <Script
+            id="structured-data"
+            type="application/ld+json"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "Dynabolt",
+                url: "https://www.dynabolt.ca",
+                logo: "https://www.dynabolt.ca/logo.png",
+                description:
+                  "Trusted MEP engineering and electrification solutions for industrial and commercial sectors.",
+              }),
+            }}
+          />
           <Navbar />
           {children}
           <Footer />

@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://dynabolt.ca/sitemap.xml",
+    sitemap: "https://www.dynabolt.ca/sitemap.xml",
   };
 }
