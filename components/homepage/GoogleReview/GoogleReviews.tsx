@@ -1,50 +1,6 @@
-"use client";
-
-import { useEffect, useRef } from "react";
-import { ReviewCard } from "./ReviewCard";
+import ReviewsSlider from "./ReviewsSlider";
 
 export default function GoogleReviews() {
-  const sliderRef = useRef<HTMLDivElement>(null);
-  const animationRef = useRef<number | null>(null);
-
-  useEffect(() => {
-    const container = sliderRef.current;
-    if (!container) return;
-
-    const speed = 0.5;
-
-    const scroll = () => {
-      container.scrollLeft += speed;
-
-      // ✅ seamless loop
-      if (container.scrollLeft >= container.scrollWidth / 2) {
-        container.scrollLeft -= container.scrollWidth / 2;
-      }
-
-      animationRef.current = requestAnimationFrame(scroll);
-    };
-
-    animationRef.current = requestAnimationFrame(scroll);
-
-    // ✅ pause on hover
-    const handleMouseEnter = () => {
-      if (animationRef.current) cancelAnimationFrame(animationRef.current);
-    };
-
-    const handleMouseLeave = () => {
-      animationRef.current = requestAnimationFrame(scroll);
-    };
-
-    container.addEventListener("mouseenter", handleMouseEnter);
-    container.addEventListener("mouseleave", handleMouseLeave);
-
-    return () => {
-      if (animationRef.current) cancelAnimationFrame(animationRef.current);
-      container.removeEventListener("mouseenter", handleMouseEnter);
-      container.removeEventListener("mouseleave", handleMouseLeave);
-    };
-  }, []);
-
   const reviews = [
     {
       name: "Michael Turner",
@@ -72,7 +28,6 @@ export default function GoogleReviews() {
       text: "Clear communication, practical solutions, and timely delivery. Working with En-ergyc made our project coordination much easier.",
     },
   ];
-
   return (
     <section className="w-full bg-[#f5f5f5] py-10 md:py-28 px-6 md:px-32">
       <div className="max-w-7xl mx-auto">
@@ -95,21 +50,8 @@ export default function GoogleReviews() {
           </div>
         </div>
 
-        {/* SLIDER WITH FADE EDGES */}
-        <div className="relative overflow-hidden md:mt-0 mt-14">
-          {/* LEFT FADE */}
-          <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-[#f5f5f5] to-transparent z-10" />
-
-          {/* RIGHT FADE */}
-          <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-[#f5f5f5] to-transparent z-10" />
-
-          {/* SLIDER */}
-          <div ref={sliderRef} className="flex gap-6 overflow-hidden">
-            {[...reviews, ...reviews].map((review, i) => (
-              <ReviewCard key={i} {...review} />
-            ))}
-          </div>
-        </div>
+        {/* CLIENT SLIDER */}
+        <ReviewsSlider reviews={reviews} />
       </div>
     </section>
   );

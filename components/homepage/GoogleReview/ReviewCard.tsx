@@ -70,7 +70,7 @@ export function ReviewCard({
       </p>
 
       {/* BUTTON */}
-      {text.length > 120 && (
+      {text.length > 200 && (
         <button
           onClick={() => setExpanded((prev) => !prev)}
           className="mt-3 text-sm text-gray-500 hover:text-black"
