@@ -1,6 +1,7 @@
 "use client";
 
 import { Mail, Phone, MapPin } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -18,19 +19,42 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* COMPANY */}
+          {/* QUICK LINKS (UPDATED) */}
           <div>
-            <h4 className="text-sm font-medium mb-4 text-white/80">Company</h4>
+            <h4 className="text-sm font-medium mb-4 text-white/80">
+              Quick Links
+            </h4>
             <ul className="space-y-2 text-sm text-white/70">
-              <li className="hover:text-white cursor-pointer">Our Company</li>
-              <li className="hover:text-white cursor-pointer">Who We Are</li>
-              <li className="hover:text-white cursor-pointer">
-                Services We Provide
+              <li>
+                <Link href="/" className="hover:text-white">
+                  Home
+                </Link>
               </li>
-              <li className="hover:text-white cursor-pointer">
-                What We Have Done
+              <li>
+                <Link href="/about-us" className="hover:text-white">
+                  About Us
+                </Link>
               </li>
-              <li className="hover:text-white cursor-pointer">Contact Us</li>
+              <li>
+                <Link href="/projects" className="hover:text-white">
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-white">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact-us" className="hover:text-white">
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/book-a-meeting" className="hover:text-white">
+                  Free Consultation
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -40,15 +64,51 @@ export default function Footer() {
               Our Services
             </h4>
             <ul className="space-y-2 text-sm text-white/70">
-              <li>Power Distribution</li>
-              <li>Fire and Life Safety</li>
-              <li>Fire Alarm System Design</li>
-              <li>Solar Power System Design</li>
-              <li>Temporary Power Design</li>
-              <li>Emergency Power Design</li>
-              <li>EV Charger Infrastructure</li>
-              <li>Construction Review</li>
-              <li>Electrical Cost Estimation</li>
+              <li>
+                <Link href="/services" className="hover:text-white">
+                  Power Distribution
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-white">
+                  Fire and Life Safety
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-white">
+                  Fire Alarm System Design
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-white">
+                  Solar Power System Design
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-white">
+                  Temporary Power Design
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-white">
+                  Emergency Power Design
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-white">
+                  EV Charger Infrastructure
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-white">
+                  Construction Review
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-white">
+                  Electrical Cost Estimation
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -66,12 +126,16 @@ export default function Footer() {
 
               <div className="flex items-center gap-3">
                 <Phone size={16} />
-                <p>905-123-1234</p>
+                <a href="tel:9051231234" className="hover:text-white">
+                  905-123-1234
+                </a>
               </div>
 
               <div className="flex items-center gap-3">
                 <Mail size={16} />
-                <p>info@dynabolt.com</p>
+                <a href="mailto:info@dynabolt.com" className="hover:text-white">
+                  info@dynabolt.com
+                </a>
               </div>
             </div>
           </div>
