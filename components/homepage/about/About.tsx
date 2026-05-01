@@ -46,13 +46,19 @@ export default function About() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="about-image relative w-full h-[260px] md:h-[320px] rounded-xl overflow-hidden col-span-5 lg:col-span-2 group">
-            <Image
-              src="/about.png"
-              alt="About En ergyc Consultant"
-              fill
-              className="object-cover group-hover:scale-105 transition duration-500"
-            />
+          <div className="about-image relative w-full h-[260px] md:h-[320px] col-span-5 lg:col-span-2 group">
+            {/* GREEN OFFSET BACKGROUND */}
+            <div className="absolute inset-0 translate-x-4 translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-500 bg-green-500 rounded-xl" />
+
+            {/* MAIN IMAGE */}
+            <div className="relative w-full h-full rounded-xl overflow-hidden group shadow-sm">
+              <Image
+                src="/about.png"
+                alt="About Dynabolt"
+                fill
+                className="object-cover group-hover:scale-105 transition duration-500"
+              />
+            </div>
           </div>
         </div>
       </div>
