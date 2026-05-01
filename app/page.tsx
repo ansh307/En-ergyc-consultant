@@ -1,10 +1,10 @@
-import About from "@/components/About";
+import About from "@/components/homepage/about/About";
 import CTASection from "@/components/CTASection";
-import GoogleReviews from "@/components/GoogleReviews";
-import Hero from "@/components/Hero";
-import OurProjects from "@/components/our-projects/OurProjects";
-import OurServices from "@/components/our-services/OurServices";
-import WhyUs from "@/components/WhyUs";
+import GoogleReviews from "@/components/homepage/GoogleReview/GoogleReviews";
+import Hero from "@/components/homepage/hero/Hero";
+import OurProjects from "@/components/homepage/our-projects/OurProjects";
+import OurServices from "@/components/homepage/our-services/OurServices";
+import WhyUs from "@/components/homepage/whyus/WhyUs";
 
 export default function Home() {
   return (
