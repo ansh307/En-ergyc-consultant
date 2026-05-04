@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 import gsap from "gsap";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -109,13 +110,21 @@ export default function Navbar() {
         {/* LOGO */}
         <Link
           href="/"
-          className={`font-semibold tracking-widest transition-colors duration-300 ${
-            scrolled ? "text-black" : "text-white"
+          className={`transition-all duration-300 bg-white rounded-full  shadow-md flex items-center ${
+            scrolled
+              ? "text-gray-700 hover:text-black"
+              : "text-gray-700 hover:text-black"
           }`}
         >
-          DynaBolt Engineering
+          <Image
+            src="/logos/dynabolt_logo-withoutbg.png"
+            alt="DynaBolt Engineering Logo"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="h-20 w-auto"
+          />
         </Link>
-
         {/* CENTER NAV */}
         <div className="hidden lg:flex bg-white rounded-full px-6 py-2 gap-6 text-sm shadow-md">
           <NavItem label="Home" href="/" active={pathname === "/"} />
@@ -172,10 +181,24 @@ export default function Navbar() {
       >
         {/* INNER NAVBAR */}
         <div className="absolute top-0 left-0 w-full flex items-center justify-between px-6 md:px-20 py-6">
-          <div className="text-black font-semibold tracking-widest">
-            DynaBolt Engineering
-          </div>
-
+          {/* LOGO */}
+          <Link
+            href="/"
+            className={`transition-all duration-300 flex items-center ${
+              scrolled
+                ? "text-gray-700 hover:text-black"
+                : "text-gray-700 hover:text-black"
+            }`}
+          >
+            <Image
+              src="/logos/dynabolt_logo-withoutbg.png"
+              alt="DynaBolt Engineering Logo"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="h-20 w-auto"
+            />
+          </Link>
           <div className="flex items-center gap-3">
             <Link
               href="/contact-us"

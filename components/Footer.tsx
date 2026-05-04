@@ -1,6 +1,7 @@
 "use client";
 
 import { Mail, Phone, MapPin } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -11,7 +12,20 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-10 border-b border-white/10 pb-10">
           {/* ABOUT */}
           <div>
-            <h3 className="text-lg font-medium mb-4">DynaBolt Engineering</h3>
+            <Link
+              href="/"
+              className={`transition-all duration-300 flex items-center `}
+            >
+              <Image
+                src="/logos/dynabolt_logo-withoutbg.png"
+                alt="DynaBolt Engineering Logo"
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="h-40 md:h-20 w-auto -translate-x-10 md:-translate-x-5"
+              />
+            </Link>
+
             <p className="text-sm text-white/70 leading-relaxed">
               DynaBolt Engineering is a Canadian engineering consulting firm
               specializing in mechanical and electrical engineering design

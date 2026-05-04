@@ -6,6 +6,15 @@ import WhyUsAnimation from "./WhyUsAnimation";
 export default function WhyUs() {
   return (
     <section className="why-section w-full bg-white py-10 md:py-28 px-6 md:px-32 relative">
+      <div className="absolute top-5 right-10 sm:right-30 w-120 h-96  pointer-events-none">
+        <Image
+          src="/bg-props/solar-panel-2.png"
+          alt="bg prop gear"
+          fill
+          className="object-contain opacity-10 sm:opacity-15 lg:opacity-40"
+        />
+      </div>
+
       {/* CONTENT */}
       <div className="max-w-7xl mx-auto relative z-10">
         {/* TOP */}
@@ -70,7 +79,7 @@ function WhyCard({ image, title, description, active }: any) {
         className={`relative bg-[#fafafa] lg:bg-[#fafafa] border border-gray-200 lg:border-gray-200 rounded-xl p-4 transition h-full flex flex-col
         ${active ? "shadow-[0_10px_30px_rgba(0,0,0,0.08)]" : ""}`}
       >
-        <div className="relative w-full h-[220px] md:h-[300px] rounded-xl overflow-hidden shadow-sm flex-shrink-0">
+        <div className="relative w-full h-[220px] md:h-[300px] rounded-xl overflow-hidden shadow-sm flex-shrink-0 why-image">
           <Image
             src={image}
             alt={title}

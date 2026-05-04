@@ -188,7 +188,7 @@ function ServiceCard({
 
 function ImageCard({ img }: { img: string }) {
   return (
-    <div className="min-w-[800px] h-[500px] relative rounded-xl overflow-hidden">
+    <div className="min-w-[800px] h-[500px] relative rounded-xl overflow-hidden shadow-md">
       <Image src={img} alt="Service" fill className="object-cover" />
     </div>
   );

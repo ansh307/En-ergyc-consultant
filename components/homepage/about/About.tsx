@@ -7,18 +7,27 @@ import AboutAnimation from "./AboutAnimation";
 export default function About() {
   return (
     <section className="about-section w-full bg-white pt-20 pb-10 md:py-28 px-6 md:px-32 relative">
-      <div className="absolute inset-0 pointer-events-none">
+      {/* <div className="absolute inset-0 pointer-events-none">
         <Image
           src="/bg-pattern.png"
           alt="bg pattern"
           fill
           className="object-cover"
         />
+      </div> */}
+
+      <div className="absolute top-0 right-0 w-150 h-96  pointer-events-none">
+        <Image
+          src="/bg-props/transmission-tower.png"
+          alt="bg prop gear"
+          fill
+          className="object-contain opacity-10 sm:opacity-30"
+        />
       </div>
 
       <div className="max-w-7xl mx-auto ">
         {/* Top Label */}
-        <p className=" text-sm text-gray-500 mb-14 lg:mb-48 flex items-center gap-2">
+        <p className=" text-sm text-gray-500 mb-14 lg:mb-28 flex items-center gap-2">
           <span className="w-2 h-2 bg-green-600 rounded-full" />
           About us
         </p>
@@ -34,7 +43,8 @@ export default function About() {
               </span>{" "}
               for industrial and commercial sectors—covering power distribution,
               EV infrastructure, smart energy systems, and IoT technologies,
-              built for efficiency and scalability.
+              built for efficiency, scalability, long-term reliability, and
+              sustainable performance.
             </h2>
 
             <Link
